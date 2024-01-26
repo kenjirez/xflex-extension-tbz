@@ -1,0 +1,36 @@
+{
+  "name": "XFlex Extension",
+  "version": "1.0.2",
+  "description": "XFlex Extension",
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "storage",
+    "notifications",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "src/service_worker/background.js"
+  },
+  "manifest_version": 3,
+  "author": "kenjirez",
+  "action":{
+    "default_popup": "src/popup/popup.html",
+    "default_title": "XFlex Extension",
+    "default_icon": {
+      "48": "images/appointment.png",
+      "128": "images/appointment.png"
+    }
+  },
+  "content_scripts": [
+    {
+    "matches": ["https://dinotronic.freshservice.com/*"],
+    "js": ["src/content/content.js"]
+    },
+    {
+     "matches": ["<all_urls>"],
+      "js": ["src/popup/popup.js"]
+    }
+  ]
+}

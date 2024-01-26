@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>XFlex Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <img class="arrows arrow-right" src="img/right-arrow.png" alt="arrow">
+    <img class="arrows arrow-left" src="img/left-arrow.png" alt="arrow">
+    <div class="main">
+        <div class="title-box">
+            <span class="title-title">XFlex Extension</span>
+        </div>
+        <div class="calendar-box">
+            <input type="date" id="datepicker" name="datepicker">
+        </div>
+        <div class="timers-box">
+            <span class="timers-title">Active Timers (0)</span>
+            <div class="timers-display"></div>
+        </div>
+        <div class="daily-box">
+            <span class="daily-title">Today's Bookings (0)</span>
+            <div class="daily-display">
+                
+            </div>
+            <button class="new-entry" type="button">New Entry</button>
+        </div>
+        <div class="new-entry-box">
+            <div class="new-id-box">
+                <span class="new-id-title">ID</span>
+                <input class="new-id-input" placeholder="-" value="-">
+            </div>
+            <div class="new-title-box">
+                <span class="new-title-title">Title</span>
+                <input class="new-title-input" required>
+            </div>
+            <div class="new-time-box">
+                <span class="new-time-title">Time</span>
+                <input class="new-time-input" placeholder="0.5" required>
+            </div>
+            <button class="confirm" type="submit">Confirm</button>
+            <button class="confirm-edit-custom" type="submit">Confirm Edit</button>
+            <button class="confirm-edit" type="submit">Confirm Edit</button>
+            <button class="delete" type="submit">Delete</button>
+            <button class="cancel" type="submit">Cancel</button>
+        </div>
+    </div>
+    <script src="popup.js" type="text/javascript"></script>
+</body>
+</html>

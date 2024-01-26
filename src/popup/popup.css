@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'Mukta';
+    src: url('Mukta-Regular.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta';
+    position: relative;
+    color: #E2E2E9;
+}
+
+.main {
+    width: 40rem;
+    height: 21rem;
+    background-color: #0D1135;
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 4rem;
+}
+
+.title-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.calendar-box {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    cursor: pointer;
+    height: 1.75rem;
+}
+
+#datepicker {
+    background-color: #ADB3EB;
+    border-style: none;
+    width: 7rem;
+    height: 1.75rem;
+    color: #1A1423;
+    font-family: "Mukta";
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.date {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.timers-box, .daily-box {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 13rem;
+    position: relative;
+    text-align: center;
+}
+
+.timers-title, .daily-title {
+    width: 10rem;
+    font-size: 1.1rem;
+    height: 1.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.timers-display, .daily-display {
+    width: 80%;
+    height: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #1D245E;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.timer, .daily {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-bottom: solid 1px #F1F1F4;
+    font-size: 0.9rem;
+}
+
+.daily {
+    cursor: pointer;
+}
+
+.ticket-id {
+    width: 15%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticket-title {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.timer-duration {
+    width: 15%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.arrow-right {
+    display: none;
+    width: 0.75rem;
+    position: absolute;
+    right: 5rem;
+    top: 4.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-left {
+    display: none;
+    width: 0.75rem;
+    position: absolute;
+    left: 5rem;
+    top: 4.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrows:hover {
+    transform: scale(1.1);
+}
+
+.new-entry {
+    position: absolute;
+    right: 3.5rem;
+    bottom: -3rem;
+}
+
+.new-entry, .confirm, .cancel, .confirm-edit-custom, .confirm-edit, .delete {
+    outline: none;
+    border: none;
+    width: 7rem;
+    height: 1.75rem;
+    background-color: inherit;
+    cursor: pointer;
+    background-color: #ADB3EB;
+    color: #0D1135;
+    border-radius: 0.25rem;
+    font-family: "Mukta";
+}
+
+.new-entry-box {
+    display: none;
+    position: relative;
+}
+
+.confirm, .confirm-edit-custom, .confirm-edit {
+    position: absolute;
+    bottom: 0rem;
+    left: 3.5rem;
+}
+
+.confirm-edit-custom, .confirm-edit {
+    display: none;
+}
+
+.delete {
+    display: none;
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cancel {
+    position: absolute;
+    bottom: 0rem;
+    right: 3.5rem;
+}
+
+.new-entry:hover, .confirm:hover, .cancel:hover, .confirm-edit:hover, .confirm-edit-custom:hover, .delete:hover {
+}
+
+.new-entry-box {
+    width: 100%;
+    height: 16rem;
+    flex-direction: row;
+    position: relative;
+    text-align: center;
+}
+
+.new-id-box, .new-title-box, .new-time-box {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 7.5rem;
+    padding: 0.5rem;
+}
+
+.new-id-box {
+    position: absolute;
+    left: calc(10% - 0.5rem);
+    align-items: left;
+}
+
+.new-title-box {
+    width: 60%;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.new-time-box {
+    position: absolute;
+    right: calc(10% - 0.5rem);
+    align-items: end;
+}
+
+.new-id-box, .new-time-box {
+    width: 15%;
+}
+
+.new-id-title, .new-title-title, .new-time-title {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.new-id-title, .new-time-title {
+    width: 70%;
+}
+
+.new-title-title {
+    width: 80%;
+}
+
+.new-id-input, .new-title-input, .new-time-input {
+    background-color: inherit;
+    border-bottom: solid 1px #E2E2E9;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    text-align: center;
+    height: 2rem;
+    font-size: 0.9rem;
+    font-family: "Mukta";
+    color: #F1F1F4;
+}
+
+.new-title-input {
+    width: 80%;
+}
+
+.new-id-input, .new-time-input {
+    width: 65%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
